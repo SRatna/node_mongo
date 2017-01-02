@@ -5,18 +5,18 @@ MongoClient.connect('mongodb://localhost:12345/TodoApp',(err,db)=>{
   else {
     console.log('connection successful');
 
-    db.collection('Todos').insertOne({
-      text:'something to do',
-      completed:false
-    },(err,result)=>{
-      if(err) return console.log(err);
-
-      console.log(JSON.stringify(result.ops,undefined,2));
-    });
+    // db.collection('Todos').insertOne({
+    //   text:'something to do',
+    //   completed:false
+    // },(err,result)=>{
+    //   if(err) return console.log(err);
+    //
+    //   console.log(JSON.stringify(result.ops,undefined,2));
+    // });
     db.collection('Users').insertOne({
       name:'ram',
       age:22,
-      location:'nepal'
+      location:'ktm'
     },(err,result)=>{
       if(err) return console.log(err);
 
